@@ -1,6 +1,6 @@
 # Final Project
 
-# Overview
+## Overview
 
 <!-- Selected topic -->
 <!-- Reason why we selected it -->
