@@ -1,3 +1,6 @@
+#Ignored Files
+pseoe_all.csv
+pseof_all.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
