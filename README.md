@@ -3,9 +3,13 @@
 ## Overview
 
 <!-- Selected topic -->
+This project will look at employment outcomes for graduates from secondary education. The goal is to predict outcomes for areas that don't already have a source of this information.
 <!-- Reason why we selected it -->
+There are only a few states that have good coverage of data on employment outcomes after graduation from secondary education. By training the machine learning model on this data we hope to predict outcomes in other states as well.
 <!-- Description of the source of data -->
+The source of the data is [The United States Census Bureau](http://www.census.gov/). 
 <!-- Question the analysis will answer -->
+The analysis will allow us to decide which institutions of secondary education are likely to provide good employment outcomes for graduates.
 
 
 ### Amazon S3 links
