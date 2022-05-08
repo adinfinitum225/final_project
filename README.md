@@ -11,6 +11,9 @@ The source of the data is [The United States Census Bureau](http://www.census.go
 <!-- Question the analysis will answer -->
 The analysis will allow us to decide which institutions of secondary education are likely to provide good employment outcomes for graduates.
 
+## Technology
+
+[Technology](technology.md)
 
 ### Amazon S3 links
 https://jamesliu-databootcamp-bucket.s3.us-east-2.amazonaws.com/pseoe_all.csv
