@@ -11,6 +11,10 @@ The source of the data is [The United States Census Bureau](http://www.census.go
 <!-- Question the analysis will answer -->
 The analysis will allow us to decide which institutions of secondary education are likely to provide good employment outcomes for graduates.
 
+## Communication
+
+To facilitate communication among group members we have created a Slack channel and are taking advantage of Zoom during Monday and Wednesday classes.
+
 ## Technology
 
 [Technology](technology.md)
