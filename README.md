@@ -62,7 +62,7 @@ The creation of this machine learning model will allow students to correctly est
 Panda Dataframes and python coding script are used in the Jupyter Notebook platform for data checks, data validation, and other exploratory analyses. 
 
 #### Database Storage
-Postgres SQL is and pgAdmin are used as our database for storing the tables of data used in this study. Amazon Web Services (AWS) is also used to host raw datasets such that the data may be accessed by multiple users. 
+Postgres SQL and pgAdmin are used as our database for storing the tables of data used in this study. Amazon Web Services (AWS) is also used to host raw datasets such that the data may be accessed by multiple users. 
 
 Examples URL to the datafiles on AWS are below: 
 
