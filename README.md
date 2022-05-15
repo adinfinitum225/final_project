@@ -70,15 +70,22 @@ https://jamesliu-databootcamp-bucket.s3.us-east-2.amazonaws.com/pseoe_all.csv
 
 https://jamesliu-databootcamp-bucket.s3.us-east-2.amazonaws.com/pseof_all.csv
 
-#### Machine Learning
-A supervised Machine learning model is used for the purpose of this analysis. The goal is to build a model that assists in determining which higher education institutions are likely to provide good employment outcomes for graduates using inputs sourced from IPEDS Institutional characteristics datafiles. 
-
 #### Dashboard
 A Tableau dashboard is used to visualize and present the data. The dashboard may be embedded on an HTML page created for the purpose of this project. 
 
 #### Languages
 Python, HTML, JS, and CSS are expected to be the languages used in this project. Python to source and manipulate the data and HTML, JS, and CSS to assist in visualizations and interactivity with the final outputs. 
 
+## Machine Learning
+
+#### Data Preprocessing
+During the data preprocessing step, the inst_level, geo_level, and ind_level columns were dropped from the analysis, as they were object type variables that only contained one value, ex: "I". THe other object data type column, cip_level, was dealt with by replacing all "A" values with the number 1, so that all data was the same type. One-hot encoding was then used and finally the datatype was changed. After attempting to run the model a couple of times, it was discovered that there are a lot of unncessary columns that complicated and messed with the analysis. Since we wanted to predict earnings on a 1 and 5 year timeframe, other variables that also had a time element needed to be dropped. 
+#### Preliminary Model Features
+The model struggled when trying to predict an actual dollar amount, instead we changed the earnings columns to 0 or 1 based on a certain dollar amount. For the first year analysis the number was set at $35,000, while for the 5th year it was set at $50,000. These numbers were chosen because roughly they were roughly the median income for their respective years. The machine learning model used the Keras Sequential neural network with a first layer "relu" activation function, and a sigmoid activation function for the output layer. The model was run for 40 epochs in each case.
+#### Train-Test Splits
+Train test splits function was imported from SKlearn to split the data into training and testing sets. The features dataset was the dataframe with all of the preprocessing done, while the target dataset was the 50th percentile earnings column. There were two tests run, one with year 1 earnings, the other with year 5 earnings. The features dataset stayed the same for both tests. 
+#### Results
+A neural network was used because they excel at finding hidden insights from data. They also do well at handling a large number of imports and features, which our dataset has. A potential drawback of using a neural netowrk is that we may not know why/which features exactly help predict post graduation earnings. Preliminary results from the model seem promising. The model accuray was approximately 63.4% at choosing whether or not students would make $35,000 or more in their first year out of school. For year 5 earnings the model regressed slightly performing at roughly 60.3%.
 
 [^1]: https://www.realestatewitch.com/college-graduate-salary-2022
 [^2]: https://lehd.ces.census.gov/data/pseo_documentation.html
