@@ -2,6 +2,14 @@
 
 This the Readme file for the project being made by UT-Austin Bootcamp group #2. 
 
+![image](https://user-images.githubusercontent.com/95975772/171069131-12cfcbef-9eba-441f-9a81-16e1f98c36fa.png)
+
+
+<p align="center">
+  <img width="460" height="300" src="![image](https://user-images.githubusercontent.com/95975772/171069540-33b0a718-a648-4670-9f81-b4f1a98f7737.png)">
+</p>
+
+
 ## Selected Topic: Post-Secondary Employment Outcomes
 
 #### Problem
@@ -18,13 +26,13 @@ The creation of this machine learning model will allow students to correctly est
 
 ## Questions: 
 
-1) Is it possible to predict student employment outcomes using a supervised machine learning model? 
+1) Is it possible to predict student employment outcomes using a supervised machine learning model? If so, how accurate can the model become?
 
-2) Is there a difference between the employment outcomes for students who graduated and stayed in the state of graduation vs those who relocated out of state?
+2) Is there a difference between the employment outcomes for students who graduated and stayed in the state of their Alma mater vs those who relocated out of state?
 
-3) What is the variance of student employment outcomes across different degree types (IE: Associates, Bachelors, Masters, etc) ?
+3) What is the variance of student employment outcomes across different degree types (IE: Associates, Bachelors, Masters, etc) ? Are there some types of certifications that are assocaited wtih greater levels of income?
 
-4) What degree types (CIP Codes) are most frequently associated with higher income earnings?
+4) What college majors (CIP Codes) are most frequently associated with higher income earnings?
 
 ##ETL (Extract, Transform, Load)
 
