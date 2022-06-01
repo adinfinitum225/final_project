@@ -4,7 +4,7 @@ This the Readme file for the project being made by UT-Austin Bootcamp group #2. 
 
 https://docs.google.com/presentation/d/16J8yEEoArD9tLwyhuwAfonAB_O479orON6SVLoIn0MA/edit#slide=id.g12cdbbe22b3_0_15
 
-![image](https://user-images.githubusercontent.com/95975772/171069131-12cfcbef-9eba-441f-9a81-16e1f98c36fa.png)
+![image](https://user-images.githubusercontent.com/95975772/171463004-6a9f5ec3-e8cb-4b8d-bd49-3426f24b90e5.png)
 
 ## Selected Topic: Post-Secondary Employment Outcomes
 
