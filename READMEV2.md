@@ -1,6 +1,8 @@
 # Final Project: Post-Secondary Employment Outcomes Prediction Modeler 
 
-This the Readme file for the project being made by UT-Austin Bootcamp group #2. 
+This the Readme file for the project being made by UT-Austin Bootcamp group #2. A link the presentation is provided here: 
+
+https://docs.google.com/presentation/d/16J8yEEoArD9tLwyhuwAfonAB_O479orON6SVLoIn0MA/edit#slide=id.g12cdbbe22b3_0_15
 
 ![image](https://user-images.githubusercontent.com/95975772/171069131-12cfcbef-9eba-441f-9a81-16e1f98c36fa.png)
 
@@ -41,6 +43,17 @@ The creation of this machine learning model will allow students to correctly est
 - The Job-to-job flows (J2J) A.K.A PSEOF datafiles are statistics on job mobility in the United States. Statistics include 1) job-to-job transition rates 2) hires and separations from employment and 3) origins and destinations for job related transitions.[^6]
 
 - The datafile in conjunction with the PSEO datafiles serve as the main data elements used in this analysis. The combination of these files enables users to track student employment and student earning outcomes across state lines.  
+
+## Technologies Used: 
+
+#### Data Cleaning and Analysis
+Panda Dataframes and python coding script are used in the Jupyter Notebook platform for data checks, data validation, and other exploratory analyses. 
+
+#### Database Storage
+Postgres SQL and pgAdmin are used as our database for storing the tables of data used in this study. Amazon Web Services (AWS) is also used to host raw datasets such that the data may be accessed by multiple users. 
+
+#### Dashboard
+A Tableau dashboard is used to visualize and present the data. The dashboard may be embedded on an HTML page created for the purpose of this project. 
 
 ## ETL (Extract, Transform, Load)
 
