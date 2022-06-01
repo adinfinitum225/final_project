@@ -158,17 +158,16 @@ There were several limitations in our analysis that could be corrected with addi
 
 1) biased sampling: Participation in the data sharing partnership used to produce the PSOE and PSEOF files is voluntary. Fewer than 20 states were represented in the underlying files and participation was heavily slanted towards Texas, Virginia, and New York. This issue may hopefully be corrected as more universities join in the data sharing partnership.
 
-**Visual of state representation in the analysis**
+**Visual of state representation in the machine learning model**
 ![image](https://user-images.githubusercontent.com/95975772/171072995-fb6ec325-d2bc-4356-89dd-42e0cfd7b05a.png)
 
 
 2) As mentioned previously, there were limitations in the data caused by the lack of certain key variables such as average age of cohorts. It is possible and likely that there are some students in the certificate cohorts that are on average older than those graduating at the baccalaureate level. This may be biasing the data somewhat on earnings outcomes.
 
-3) Additional data elements. IPEDS data are data elements collected for every postsecondary education institution in the US on a diverse range of areas including the following: Institutional characteristics, Institutional prices / tuition, Admissions, Finances, and others. Data collection is mandatory for all higher education institutions and is collected on an annual basis by the NCES [^7].
+3) Additional data elements. IPEDS data are data elements collected for every postsecondary education institution in the US on a diverse range of areas including the following: Institutional characteristics, Institutional prices / tuition, Admissions, Finances, and others. Data collection is mandatory for all higher education institutions and is collected on an annual basis by the NCES [^7]. The usage of these data files promotes the matching of a greater amounts of institutional information into our machine learning models. A preliminary analysis of the relatoinship between student earnings and institutional characteristics showed promise. When assessing the relationship between institutional local (conceptualized as a scale of rural to urban), a strong relationship between earnings and degree of urbanization was identified, all else held equal. Additionally, other variables such as institutional size and the status of having multiple campus sites locations were also found to be strongly related to over earnings. 
 
-For the purpose of this study, we are primarily interested in institutional characteristics. The category of institutional characteristics includes such information as tuition and fees, room and board, institutional category (public vs private), degree of rurality (urban vs fringe), size of the institution (large vs small), and various other details at the institutional level. The usage of these data files promotes the matching of a greater amount of institutional information into our machine learning models. A preliminary analysis of the relatoinship between student earnings post graduation adn institutional characteristics showed promise. When assessing the relationship between institutional local (conceptualized as a scale of rural to urban), a strong relationship between earnings and degree of urbanization was identified, while controlling for other institutional characteristics such as control type (public vs. private) and size of Undergradaute level student cohorts. 
 
-![image](https://user-images.githubusercontent.com/95975772/171073502-321bdf02-625a-4307-83e7-eaa04f39664f.png)
+![image](https://user-images.githubusercontent.com/95975772/171460603-1e5a745c-b4b1-4638-983c-1a1512f79d78.png)
 
 
 [^1]: https://www.realestatewitch.com/college-graduate-salary-2022
