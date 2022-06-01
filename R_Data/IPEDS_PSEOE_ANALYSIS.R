@@ -168,25 +168,97 @@ unique(jointdataset$UGOFFER)
 unique(jointdataset$GROFFER)
 #this variable tests if uni is private or public*.
 unique(jointdataset$CONTROL)
-#this variable tests highest degree offered*.
-unique(jointdataset$HLOFFER)
+#this variable tests if uni is tribal designation*.
+
+#unique(jointdataset$TRIBAL) - this was not included as there is no variation on data point*.
+
+#this variable tests highest degree offered*
+#NOTE: this variable was removed as being potentially already captured by other more defined dummy variables UGOFFER; GROFFER*.
+#unique(jointdataset$HLOFFER)
+
+#tests if uni  is part of a multi-institution or multi-campus organization*.
+unique(jointdataset$F1SYSTYP)
+
 #this variable tests the size of the university's class*. 
 unique(jointdataset$C18SZSET)
 #this variable is an alternative test of the uni size*.
 unique(jointdataset$INSTSIZE)
 
 
+#*******************************************************************************.
+#Step 10
+#recoding some variables as dummy variables*.
+
+#recoding status of offering UG level degrees as '1' for yes*. 
+Offers_UG_DEGREE <- ifelse(jointdataset$UGOFFER == 1,1,0)
+#recoding status of offering GR level degrees as '1' for yes*. 
+Offers_GR_DEGREE <- ifelse(jointdataset$GROFFER == 1,1,0)
+#this variable tests if uni is private vs public as '1' for public*.
+IS_PUBLILC_INST <- ifelse(jointdataset$CONTROL == 1,1,0)
+
+#recoding multi institutional campus institution as '1' for year*.
+  #first recoding '-2' (Not applicable) as null values in the column*.
+F1SYSTYPV2 <- jointdataset %>% 
+  mutate(F1SYSTYP = na_if(F1SYSTYP,-2))
+
+unique(F1SYSTYPV2$F1SYSTYP)
+
+IS_MULTI_CAMPUS <- ifelse(F1SYSTYPV2$F1SYSTYP == 1,1,0)
+
+#removing temp dataframe from environment*.
+remove(F1SYSTYPV2)
+
+#*******************************************************************************.
+#step 11
+#converting items in ordinal variables within dataset*.
+
+#recoding C18SZSET INFORMATION*.
+#first recoding '-2' (Not applicable) as null values in the column*.
+
+C18SZSETV2 <- jointdataset %>% 
+  mutate(C18SZSET = na_if(C18SZSET,-2))
+#testing outcome*
+unique(C18SZSETV2$C18SZSET)
+#removing all other columns*
+C18SZSETV2 =C18SZSETV2[["C18SZSET"]]
+
+
+#recoding INSTSIZE INFORMATION*.
+#first recoding '-2' (Not applicable) as null values in the column*.
+
+INSTSIZEV2 <- jointdataset %>% 
+  mutate(INSTSIZE = na_if(INSTSIZE,-2))
+#testing outcome*.
+unique(INSTSIZEV2$INSTSIZE)
+#removing all other columns*
+INSTSIZEV2 =INSTSIZEV2[["INSTSIZE"]]
 
 
 #*******************************************************************************.
-#Step 10
+#step 12
+#creating data frame for regression analysis*. 
+
+jointdataset_REG <- data.frame(LOCALE = jointdataset$LOCALE,
+                               Offers_UG_DEGREE = Offers_UG_DEGREE,
+                               Offers_GR_DEGREE = Offers_GR_DEGREE,
+                               IS_PUBLILC_INST = IS_PUBLILC_INST,
+                               IS_MULTI_CAMPUS = IS_MULTI_CAMPUS,
+                               INST_SIZE = INSTSIZEV2,
+                               INST_SET_CLASS = C18SZSETV2,
+                               y1_p50_earnings=jointdataset$y1_p50_earnings)
+                               
+                               
+
+glimpse(jointdataset_REG)
+
+
+
+#*******************************************************************************.
+#Step 11
 #testing early version of broader regression analysis*.
-lm(y1_p50_earnings ~ LOCALE + UGOFFER + GROFFER + CONTROL +C18SZSET,data=jointdataset) #generate multiple linear regression model
+lm(y1_p50_earnings ~ LOCALE + Offers_UG_DEGREE + Offers_GR_DEGREE + IS_PUBLILC_INST +INST_SET_CLASS +IS_MULTI_CAMPUS + INST_SIZE,data=jointdataset_REG) #generate multiple linear regression model
 
-summary(lm(y1_p50_earnings ~ LOCALE + UGOFFER + GROFFER + CONTROL + C18SZSET + INSTSIZE,data=jointdataset)) #creating summary stats 
-
-
-#NOTE: HLOFFER currently doesn't work correctly in the regression analysis*. 
+summary(lm(y1_p50_earnings ~ LOCALE + Offers_UG_DEGREE + Offers_GR_DEGREE + IS_PUBLILC_INST +INST_SET_CLASS +IS_MULTI_CAMPUS + INST_SIZE,data=jointdataset_REG)) #creating summary stats 
 
 
 
